@@ -1,0 +1,6 @@
+{
+  "notConfigured": {
+    "title": "OpenProject is not configured yet",
+    "text": "Ask your administrator to set the %{flag} flag to the URL of your OpenProject service."
+  }
+}

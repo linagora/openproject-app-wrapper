@@ -1,0 +1,58 @@
+{
+  "name": "OpenProject",
+  "name_prefix": "Twake",
+  "slug": "openproject",
+  "version": "1.0.0",
+  "type": "webapp",
+  "licence": "AGPL-3.0",
+  "icon": "assets/icon.png",
+  "categories": ["productivity"],
+  "source": "https://github.com/linagora/openproject-app-wrapper",
+  "editor": "Linagora",
+  "developer": {
+    "name": "Linagora",
+    "url": "https://twake.app"
+  },
+  "default_locale": "en",
+  "locales": {
+    "en": {
+      "name": "OpenProject",
+      "short_description": "Embedded OpenProject project management",
+      "long_description": "Cozy wrapper around an OpenProject instance. The embedded service URL is provided at runtime through the `openproject.embedded-app-url` flag."
+    },
+    "fr": {
+      "name": "OpenProject",
+      "short_description": "Gestion de projet OpenProject embarquée",
+      "long_description": "Wrapper Cozy autour d'une instance OpenProject. L'URL du service embarqué est fournie à l'exécution via le flag `openproject.embedded-app-url`."
+    }
+  },
+  "routes": {
+    "/": {
+      "folder": "/",
+      "index": "index.html",
+      "public": false
+    }
+  },
+  "permissions": {
+    "apps": {
+      "description": "Required by the cozy-bar to display the icons of the apps",
+      "type": "io.cozy.apps",
+      "verbs": ["GET"]
+    },
+    "settings": {
+      "description": "Required by the cozy-bar and to read application flags",
+      "type": "io.cozy.settings",
+      "verbs": ["GET"]
+    },
+    "contacts": {
+      "description": "Required by the cozy-bar to display the avatar",
+      "type": "io.cozy.contacts",
+      "verbs": ["GET"]
+    },
+    "files": {
+      "description": "Required by the cozy-bar to get shortcuts",
+      "type": "io.cozy.files",
+      "verbs": ["GET"]
+    }
+  }
+}
