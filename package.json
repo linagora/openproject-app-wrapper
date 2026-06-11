@@ -12,7 +12,7 @@
     "lint:styles": "stylint src/styles --config ./.stylintrc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "cozyPublish": "cozy-app-publish --token $REGISTRY_TOKEN --prepublish downcloud --postpublish mattermost"
+    "cozyPublish": "cozy-app-publish --token $REGISTRY_TOKEN --prepublish downcloud"
   },
   "repository": {
     "type": "git",
