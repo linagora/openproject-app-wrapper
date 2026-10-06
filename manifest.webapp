@@ -24,6 +24,21 @@
       "name": "OpenProject",
       "short_description": "Gestion de projet OpenProject embarquée",
       "long_description": "Wrapper Cozy autour d'une instance OpenProject. L'URL du service embarqué est fournie à l'exécution via le flag `openproject.embedded-app-url`."
+    },
+    "es": {
+      "name": "OpenProject",
+      "short_description": "Gestión de proyectos OpenProject integrada",
+      "long_description": "Wrapper de Cozy para una instancia de OpenProject. La URL del servicio integrado se proporciona en tiempo de ejecución mediante el flag `openproject.embedded-app-url`."
+    },
+    "de": {
+      "name": "OpenProject",
+      "short_description": "Eingebettetes OpenProject-Projektmanagement",
+      "long_description": "Cozy-Wrapper für eine OpenProject-Instanz. Die URL des eingebetteten Dienstes wird zur Laufzeit über das Flag `openproject.embedded-app-url` bereitgestellt."
+    },
+    "it": {
+      "name": "OpenProject",
+      "short_description": "Gestione progetti OpenProject integrata",
+      "long_description": "Wrapper Cozy per un'istanza OpenProject. L'URL del servizio integrato viene fornito in fase di esecuzione tramite il flag `openproject.embedded-app-url`."
     }
   },
   "routes": {

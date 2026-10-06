@@ -1,0 +1,9 @@
+{
+  "notConfigured": {
+    "title": "OpenProject ist noch nicht konfiguriert",
+    "text": "Bitten Sie Ihren Administrator, das Flag %{flag} auf die URL Ihres OpenProject-Dienstes zu setzen."
+  },
+  "embeddedApp": {
+    "title": "Eingebetteter OpenProject-Dienst"
+  }
+}

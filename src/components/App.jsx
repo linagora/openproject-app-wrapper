@@ -1,4 +1,5 @@
 import React from 'react'
+import { useI18n } from 'twake-i18n'
 
 import flag from 'cozy-flags'
 
@@ -12,6 +13,7 @@ import { NotConfigured } from '@/components/NotConfigured'
 export const EMBEDDED_APP_URL_FLAG = 'openproject.embedded-app-url'
 
 export const App = () => {
+  const { t } = useI18n()
   const embeddedAppUrl = flag.useFlag(EMBEDDED_APP_URL_FLAG)
 
   if (!embeddedAppUrl) {
@@ -22,7 +24,7 @@ export const App = () => {
     <iframe
       id="embeddedApp"
       data-testid="embedded-app"
-      title="OpenProject"
+      title={t('embeddedApp.title')}
       src={embeddedAppUrl}
       allow="clipboard-read; clipboard-write"
     />

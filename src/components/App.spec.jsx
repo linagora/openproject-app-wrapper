@@ -1,9 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import React from 'react'
+import I18n from 'twake-i18n'
 
 import flag from 'cozy-flags'
 
 import { App } from './App'
+
+import en from '@/locales/en.json'
 
 jest.mock('cozy-flags', () => ({
   __esModule: true,
@@ -15,14 +18,22 @@ jest.mock('@/components/NotConfigured', () => ({
     require('react').createElement('div', { 'data-testid': 'not-configured' })
 }))
 
+const renderApp = () =>
+  render(
+    <I18n lang="en" dictRequire={() => en}>
+      <App />
+    </I18n>
+  )
+
 describe('App', () => {
   it('renders the embedded iframe when the flag is set', () => {
     flag.useFlag.mockReturnValue('https://openproject.example.org')
 
-    render(<App />)
+    renderApp()
 
     const iframe = screen.queryByTestId('embedded-app')
     expect(iframe).toBeInTheDocument()
+    expect(iframe).toHaveAttribute('title', 'Embedded OpenProject service')
     expect(iframe).toHaveAttribute('src', 'https://openproject.example.org')
     expect(screen.queryByTestId('not-configured')).toBe(null)
   })
@@ -30,7 +41,7 @@ describe('App', () => {
   it('renders the not-configured screen when the flag is missing', () => {
     flag.useFlag.mockReturnValue(undefined)
 
-    render(<App />)
+    renderApp()
 
     expect(screen.queryByTestId('not-configured')).toBeInTheDocument()
     expect(screen.queryByTestId('embedded-app')).toBe(null)
